@@ -199,6 +199,30 @@ def MDU_options(request):
     if (request.POST["option"]=="I"):
         return render(request, 'I.html')    
 
+def I_results(request):
+    victim = request.POST["v"] 
+    center = request.POST["c"]
+    date = request.POST["a"]
+
+ 
+    v = victims.objects.all()
+    flag =0
+    for q in v:
+        if q.victim_id == victim:
+            flag = 1
+            return render(request, 'A.html') 
+    count = 0 
+    for q in v:
+        count = count + 1 
+
+
+    x = int(count+1) 
+    conn = psycopg2.connect(database = "COVID19", user = "postgres", password = "cs251", host = "127.0.0.1", port = "5432")
+    cur = conn.cursor()
+    cur.execute("INSERT INTO public.travello_victims(id, victim_id, centre_id, admit_date) VALUES (%s, %s, %s, %s) ",(x,victim,center,date,))
+    
+
+    return render(request, 'I_results.html')
 
 def PD_results(request):
     person = request.POST["x"]
@@ -662,23 +686,3 @@ def V_results(request):
         return render(request, 'V_results.html',{'th': th})    
 
 
-def I_results(request):
-    victim = request.POST["v"] 
-    center = request.POST["c"]
-    date = request.POST["a"]
-    v = victims.objects.all()
-    flag =0
-    for q in v:
-        if q.victim_id == victim:
-            flag = 1
-            return render(request, 'A.html') 
-    count = 0 
-    for q in v:
-        count = count + 1 
-
-
-    x = int(count+1) 
-    conn = psycopg2.connect(database = "COVID19", user = "postgres", password = "cs251", host = "127.0.0.1", port = "5432")
-    cur = conn.cursor()
-    cur.execute("INSERT INTO public.travello_victims(id, victim_id, centre_id, admit_date) VALUES (246, %s, %s, %s) ",(victim,center,date,))
-    return(request, 'I_results.html')
