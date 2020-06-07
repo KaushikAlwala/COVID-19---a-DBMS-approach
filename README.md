@@ -1,2 +1,2 @@
 # COVID-19 a-DBMS-approach
-# template adopted from http://templated.co
+# template taken from http://templated.co
