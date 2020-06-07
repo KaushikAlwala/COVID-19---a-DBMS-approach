@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Atmosphere 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110923
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CS_minor Project</title>
+<link href="{%static 'style.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">COVID19 </a></h1>
+			<p>a_DBMS_approach</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="homepage">Home</a></li>
+				<li><a href="doneby">Authors</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="#">Travel History section</a></h2>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<form method="post" action="TH_results">
+						<div>
+							{% csrf_token %}
+							Please enter a date either in April or May<br>
+							Person Id : <input type="text" name="s"  value="" /><br>
+							Select a date from the available<br>
+							<input type="radio" id="april_16" name="option" value="april_16">
+							<label for="april_16">April 16</label><br>
+							<input type="radio" id="april_17" name="option" value="april_17">
+							<label for="april_17">April 17</label><br>
+							<input type="radio" id="april_18" name="option" value="april_18">
+							<label for="april_18">April 18</label><br>
+							<input type="radio" id="april_19" name="option" value="april_19">
+							<label for="april_19">April 19</label><br>
+							<input type="radio" id="april_20" name="option" value="april_20">
+							<label for="april_20">April 20</label><br>
+							<input type="radio" id="april_21" name="option" value="april_21">
+							<label for="april_21">April 21</label><br>
+							<input type="radio" id="april_22" name="option" value="april_22">
+							<label for="april_22">April 22</label><br>
+							<input type="radio" id="april_23" name="option" value="april_23">
+							<label for="april_23">April 23</label><br>
+							<input type="radio" id="april_24" name="option" value="april_24">
+							<label for="april_24">April 24</label><br>
+							<input type="radio" id="april_25" name="option" value="april_25">
+							<label for="april_25">April 25</label><br>
+							<input type="radio" id="april_26" name="option" value="april_26">
+							<label for="april_26">April 26</label><br>
+							<input type="radio" id="april_27" name="option" value="april_27">
+							<label for="april_27">April 27</label><br>
+							<input type="radio" id="april_28" name="option" value="april_28">
+							<label for="april_28">April 28</label><br>
+							<input type="radio" id="april_29" name="option" value="april_29">
+							<label for="april_29">April 29</label><br>
+							<input type="radio" id="april_30" name="option" value="april_30">
+							<label for="april_30">April 30</label><br>
+
+
+
+							<input type="submit" id="search-submit" value="search" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<div id="search" >
+						<form method="post" action="">
+							<div>
+								
+							</div>
+						</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<li>
+					
+				</li>
+				<li>
+					<h2>General Information</h2>
+					<ul>
+						<li><a href="link_1">Symptoms of Coronavirus</a></li>
+						<li><a href="link_2">Prevention Measures for Coronavirus</a></li>
+						<li><a href="link_3">Effect on world economy</a></li>
+						<li><a href="link_5"></a></li>
+						<li><a href="link_5"></a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>World News</h2>
+					<ul>
+						<li><a href="link_6">COVID19: best handling</a></li>
+						<li><a href="link_7">Top 3, cases wise </a></li>
+						<li><a href="link_8">113-Year-Old Woman beats COVID19</a></li>
+						<li><a href="link_9"></a></li>
+						<li><a href="link_10"></a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>India News</h2>
+					<ul>
+						<li><a href="link_11">Hydroxychloroquine trials</a></li>
+						<li><a href="link_12">India is still at risk</a></li>
+						<li><a href="link_13">digital adoption in India</a></li>
+						<li><a href="link_14"></a></li>
+						<li><a href="link_15"></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div id="footer-bg" class="container">
+		
+		<div id="column3">
+			<h2>Recommended Links</h2>
+			<ul>
+				<li><a href="https://www.covid19india.org/">covid19.india.org.in</a></li>
+				<li><a href="https://www.mygov.in/covid-19">mygov.in</a></li>
+				<li><a href="https://covid19.who.int/">WHO COVID 19 Dashboard</a></li>
+				<li><a href="https://pmnrf.gov.in/en/">Donate to PMNRF</a></li>
+				<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate">Donate to WHO</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer">
+
+</div>
+<!-- end #footer -->
+</body>
+</html>

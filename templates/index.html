@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Atmosphere 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110923
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CS_minor Project</title>
+<link href="{%static 'style.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">COVID19 </a></h1> 
+			<p>a_DBMS_approach</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="homepage">Home</a></li>
+				<li><a href="doneby">Authors</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="#">Home Page </a></h2>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>This project titled “COVID 19 Pandemic - a DBMS approach” aims to implement database concepts involving storing and analyzing the details concerning various aspects of the ongoing COVID-19 pandemic, and how such a database model may be useful for managing the pandemic. </p>
+					<p>In this project, we have developed a model that integrates a database system with web applications. The model aims to provide better tools for the management of population (healthy individuals) and the victims alike in a given area.</p>
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">Analysis of the data</a></h2>
+				<p class="meta"><span class="date">choose an option</span>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<form method="post" action="MDU_options">
+						<div>
+							{% csrf_token %}
+							<input type="radio" id="Travel_history" name="option" value="Travel_history">
+							<label for="Travel_history">Travel History</label><br>
+							<input type="radio" id="PD" name="option" value="PD">
+							<label for="PD">Person Details</label><br>
+							<input type="radio" id="QC" name="option" value="QC">
+							<label for="QC">Quarantine Centres</label><br>	
+							<input type="radio" id="VC" name="option" value="VC">
+							<label for="VC">Victim Check</label><br>
+							<input type="radio" id="Vulnerability" name="option" value="Vulnerability">
+							<label for="Vulnerability">Vulnerability</label><br>
+							<input type="radio" id="I" name="option" value="I">
+							<label for="I">Report a case</label><br>
+
+							<input type="submit" value="Go">					
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">real world data</a></h2>
+				<p class="meta"><span class="date">choose an option</span>
+				<div class="entry">
+					<form method="post" action="your_options">
+						<div>
+							{% csrf_token %}
+							<input type="radio" id="Cases_in_different_countries" name="option" value="Cases_in_different_countries">
+							<label for="Cases_in_different_countries">Cases in different countries</label><br>
+							<input type="radio" id="else" name="option" value="else">
+							<label for="else">Graphs of differnt countries</label><br>
+							<input type="submit" value="Go">					
+						</div>
+					</form>
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<div id="search" >
+						<form method="post" action="cases">
+							<div>
+
+							</div>
+						</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<li>
+					
+				</li>
+				<li>
+					<h2>General Information</h2>
+					<ul>
+						<li><a href="link_1">Symptoms of Coronavirus</a></li>
+						<li><a href="link_2">Prevention Measures for Coronavirus</a></li>
+						<li><a href="link_3">Effect on world economy</a></li>
+						<li><a href="link_5"></a></li>
+						<li><a href="link_5"></a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>World News</h2>
+					<ul>
+						<li><a href="link_6">COVID19: best handling</a></li>
+						<li><a href="link_7">Top 3, cases wise </a></li>
+						<li><a href="link_8">113-Year-Old Woman beats COVID19</a></li>
+						<li><a href="link_9"></a></li>
+						<li><a href="link_10"></a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>India News</h2>
+					<ul>
+						<li><a href="link_11">Hydroxychloroquine trials</a></li>
+						<li><a href="link_12">India is still at risk</a></li>
+						<li><a href="link_13">digital adoption in India</a></li>
+						<li><a href="link_14"></a></li>
+						<li><a href="link_15"></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div id="footer-bg" class="container">
+		
+		<div id="column3">
+			<h2>Recommended Links</h2>
+			<ul>
+				<li><a href="https://www.covid19india.org/">covid19.india.org.in</a></li>
+				<li><a href="https://www.mygov.in/covid-19">mygov.in</a></li>
+				<li><a href="https://covid19.who.int/">WHO COVID 19 Dashboard</a></li>
+				<li><a href="https://pmnrf.gov.in/en/">Donate to PMNRF</a></li>
+				<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate">Donate to WHO</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end #footer -->
+</body>
+</html>
